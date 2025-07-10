@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Storico Meteo</title>
+    <!-- Collegamento corretto al CSS nella cartella static -->
+    <link rel="stylesheet" th:href="@{/meteo.css}">
+</head>
+<body>
+    <h1>Storico Meteo - Ultime 2 settimane</h1>
+
+    <!-- Form per selezionare una città -->
+    <form method="post" action="/meteo">
+        <label for="city">Seleziona una città:</label>
+        <select name="city" id="city" required>
+            <option value="">--Scegli una città--</option>
+            <option value="roma">Roma</option>
+            <option value="milano">Milano</option>
+            <option value="bologna">Bologna</option>
+            <option value="napoli">Napoli</option>
+            <option value="torino">Torino</option>
+        </select>
+        <button type="submit">Mostra Meteo</button>
+    </form>
+
+    <!-- Tabella con i risultati -->
+    <div th:if="${meteo != null}">
+        <h2 th:text="'Meteo per ' + ${citta}"></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Temperatura (°C)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="i : ${#numbers.sequence(0, meteo.date.size() - 1)}">
+                    <td th:text="${meteo.date[i]}">01/01</td>
+                    <td th:text="${meteo.temperature[i]}">15.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

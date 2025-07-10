@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MeteoApplication<meteo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.quiz.MeteoApplication",
+            "projectName": "meteo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MeteoApplication<meteo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.MeteoApplication",
+            "projectName": "meteo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

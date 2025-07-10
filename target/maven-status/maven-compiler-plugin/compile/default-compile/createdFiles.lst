@@ -1,0 +1,6 @@
+com\controller\meteoController.class
+com\dto\meteoDTO.class
+com\service\meteoService$OpenMeteoResponse.class
+com\service\meteoService.class
+com\service\meteoService$OpenMeteoResponse$CurrentWeather.class
+com\MeteoApplication.class
