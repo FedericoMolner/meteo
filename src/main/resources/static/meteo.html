@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Meteo</title>
+    <link rel="stylesheet" href="/meteo.css">
+</head>
+<body>
+    <h1>Servizio Meteo</h1>
+    <form method="post" action="/meteo">
+        <label>Latitudine:</label>
+        <input type="text" name="lat" required><br>
+        <label>Longitudine:</label>
+        <input type="text" name="lon" required><br>
+        <button type="submit">Cerca</button>
+    </form>
+
+    <div th:if="${meteo != null}">
+        <h2>Risultati:</h2>
+        <p>Temperatura: <span th:text="${meteo.temperatura}">?</span>°C</p>
+        <p>Condizione: <span th:text="${meteo.condizione}">?</span></p>
+    </div>
+</body>
+</html>
