@@ -1,22 +1,24 @@
 package com.dto;
 
+import java.util.List;
+
 public class meteoDTO {
-    private double temperatura;
-    private String condizione;
+    private List<String> date;
+    private List<Double> temperature;
 
-    public double getTemperatura() {
-        return temperatura;
+    public List<String> getDate() {
+        return date;
     }
 
-    public void setTemperatura(double temperatura) {
-        this.temperatura = temperatura;
+    public void setDate(List<String> date) {
+        this.date = date;
     }
 
-    public String getCondizione() {
-        return condizione;
+    public List<Double> getTemperature() {
+        return temperature;
     }
 
-    public void setCondizione(String condizione) {
-        this.condizione = condizione;
+    public void setTemperature(List<Double> temperature) {
+        this.temperature = temperature;
     }
 }

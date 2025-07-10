@@ -1,36 +1,50 @@
+/* Stili Generali */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f8ff;
     margin: 0;
     padding: 30px;
     color: #333;
+    line-height: 1.6;
 }
 
 h1, h2 {
     color: #1c3faa;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
+/* Stili del Form */
 form {
-    margin-bottom: 20px;
+    margin: 0 auto 30px auto; /* Centra il form */
     background-color: #ffffff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombra più pronunciata */
+    max-width: 450px; /* Larghezza massima leggermente aumentata */
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 0 0 8px;
     font-weight: bold;
+    color: #555;
 }
 
 select, button {
-    padding: 8px;
+    padding: 10px 12px; /* Padding leggermente maggiore */
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding e border nella larghezza */
+    font-size: 1rem;
+}
+
+select:focus, button:focus {
+    outline: none;
+    border-color: #1c3faa;
+    box-shadow: 0 0 0 3px rgba(28, 63, 170, 0.2);
 }
 
 button {
@@ -38,32 +52,54 @@ button {
     color: white;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transizione per hover */
 }
 
 button:hover {
     background-color: #162e7a;
+    transform: translateY(-2px); /* Piccolo effetto al passaggio del mouse */
+}
+
+/* Stili della Tabella dei Risultati */
+.weather-results {
+    margin: 0 auto; /* Centra il div dei risultati */
+    max-width: 700px; /* Larghezza massima per la tabella */
+}
+
+.weather-results h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #1c3faa;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-    max-width: 600px;
     margin-top: 20px;
     background-color: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Bordi arrotondati per la tabella */
+    overflow: hidden; /* Assicura che i bordi arrotondati siano visibili */
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 12px;
+    border: 1px solid #eee; /* Bordi della tabella più leggeri */
+    padding: 15px; /* Padding leggermente maggiore */
     text-align: center;
 }
 
 th {
     background-color: #1c3faa;
     color: white;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 tbody tr:nth-child(even) {
     background-color: #f0f4ff;
+}
+
+tbody tr:hover {
+    background-color: #e6eeff; /* Effetto hover sulle righe */
 }
